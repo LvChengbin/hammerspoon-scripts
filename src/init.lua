@@ -7,4 +7,6 @@
  -- Description:
 --------------------------------------------------------------------
 
-require( 'src' );
+require( 'hammerspoon-config-reload' );
+require( 'scroll' )
+require( 'control-escape' )
