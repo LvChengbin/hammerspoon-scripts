@@ -5,7 +5,7 @@
  -- Author: LvChengbin<lvchengbin59@gmail.com>
  -- Time: 01/03/2021
  -- Description: send ESC if CTRL is tapped without other keys
- -------------------------------------------------------------------
+--------------------------------------------------------------------
 
 send = false
 prev = {}
