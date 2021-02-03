@@ -12,7 +12,7 @@ prev = {}
 
 timer = hs.timer.delayed.new( 0.15, function() send = false end );
 
-hs.eventtap.new( { hs.eventtap.event.types.flagsChanged }, function( e )
+watcher = hs.eventtap.new( { hs.eventtap.event.types.flagsChanged }, function( e )
     local modifiers = e:getFlags()
 
     -- make sure that the event will only be handled once
@@ -34,9 +34,13 @@ hs.eventtap.new( { hs.eventtap.event.types.flagsChanged }, function( e )
 
     return false
 
-end ): start()
+end )
 
-hs.eventtap.new( { hs.eventtap.event.types.keyDown }, function()
+watcher: start()
+
+canceller = hs.eventtap.new( { hs.eventtap.event.types.keyDown }, function()
     send = false
     return false
-end ):start()
+end )
+
+canceller:start()

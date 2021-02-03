@@ -9,6 +9,7 @@
 
 package.path = debug.getinfo( 1, 'S' ).source:match[[^@?(.*[\/])[^\/]-$]] .. 'src/?.lua;' .. package.path
 
-require( 'hammerspoon-config-reload' );
-require( 'scroll' );
-require( 'control-escape' );
+-- require( 'lock-internal-keyboard' )
+require( 'hammerspoon-config-reload' )
+require( 'scroll' )
+require( 'control-escape' )
